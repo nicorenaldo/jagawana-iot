@@ -15,6 +15,9 @@ Jagawana is a Forest Logging Prevention System, using Wide Sensor Network and Ma
 * [Cloud Computing](https://github.com/jeffrywu28/jagawana-cloud)
 * [Mobile Apps Android](https://github.com/Bobby-Anggunawan/Jagawana-AndroidApp)
 
+### Medium Posts
+* [About Jagawana](https://nicorenaldo.medium.com/detecting-chainsaws-in-forest-with-machine-learning-jagawana-989fd345784)
+* [Design and Details](https://nicorenaldo.medium.com/jagawana-internet-of-things-511d63e48349)
 ---
 ## Components
 1. ESP32
