@@ -4,7 +4,7 @@
 '''
 
 # Receive data from ESP32 and send it to GCP
-from google.cloud import pubsub_v1
+# from google.cloud import pubsub_v1
 import os
 import json
 import paho.mqtt.client as mqtt
@@ -14,10 +14,10 @@ from config import MQTT_Custom
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:\\Nico\\RandomStuff\\Programming Project\\Bangkit\\xenon-anthem-312407-cb2e4d941db7.json"
 
 # GCP Variables
-project_id = 'xenon-anthem-312407'
-topic_id = 'testpub'
-publisher = pubsub_v1.PublisherClient()
-topic_path = publisher.topic_path(project_id, topic_id)
+# project_id = 'xenon-anthem-312407'
+# topic_id = 'testpub'
+# publisher = pubsub_v1.PublisherClient()
+# topic_path = publisher.topic_path(project_id, topic_id)
 
 # Variable to store incoming byte data
 stored_data = b''

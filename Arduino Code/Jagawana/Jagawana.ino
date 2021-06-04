@@ -5,7 +5,6 @@
 #include <SD.h>
 #include "WiFi.h"
 #include <PubSubClient.h>
-#define MQTT_MAX_PACKET_SIZE 2048
 
 const char* ssid = "M2000";
 const char* password = "11223344";

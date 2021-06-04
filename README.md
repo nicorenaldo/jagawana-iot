@@ -6,7 +6,7 @@ This is a prototype code for our Sensor Network. We use ESP32 and mosquitto brok
 
 Jagawana is a Forest Logging Prevention System, using Wide Sensor Network and Machine Learning to detect and alert chainsaws sounds to users using Android App and Google Cloud Platform. 
 
-<img src="img/Illustration.png" width="500px"/>
+<img src="img/Info-01.jpg" width="500px"/>
 
 ---
 
@@ -26,7 +26,12 @@ Our team use analogue microphone for the sake of prices, we use MAX9814 breakout
 You can replace it with I2S device (such as the SPH0645 and INMP441) that has more support and better in general than analogue device.
 
 ## Schematics
-`to be added`
+<img src="img/Schematic.jpg" width="500px"/>
+MAX9814 Wiring
+
+AR - dont connect
+
+Gain - if it's not connected is 60dB Gain, if its connected to Gnd it's 50dB, and if it's connected to Vdd it's 40dB
 
 
 ## Workflow
@@ -60,6 +65,14 @@ There are several libraries that you need to download first, you can download it
 Afterward, you need to modify the code by changing the WiFi ssid and password, and include your mosquitto broker local IP, you can use ( `ipconfig` for windows, `ifconfig` for linux ) command from the command prompt and lookup the IPv4 line.
 
 You done it, upload the code and give command to your ESP32 from your other device (PC or Raspberry Pi).
+
+To change the maximum buffer on MQTT, you need to change the library file located on `Documents > Arduino > libraries > PubSubClient > src > PubSubClient.h`
+
+Open and edit the file to the following lines
+```
+#define MQTT_MAX_PACKET_SIZE 1024
+```
+The default number of MQTT max packet size is 256 bytes, for this project I use 512 bytes per packet, but I define the maximum value to 1024 just to be sure.
 
 ## Gateway
 First up, open the `Broker Code` folder and install some packages needed. Make sure you have Python installed, it's also recommended to make a virtual enviroment first for this project. 
